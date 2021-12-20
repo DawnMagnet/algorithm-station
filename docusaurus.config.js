@@ -45,7 +45,7 @@ const config = {
       navbar: {
         title: '曙光磁铁的算法小站',
         logo: {
-          alt: '曙光磁铁的算法小站 Logo',
+          alt: 'GE Logo',
           src: 'img/logo.svg',
         },
         items: [
