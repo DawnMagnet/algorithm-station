@@ -1,0 +1,51 @@
+原贴地址：http://blog.leanote.com/post/dawnmagnet/e25aa1655474
+# 题目
+![title](https://leanote.com/api/file/getImage?fileId=6098a6daab644148df00223
+e)
+# 思路分析
+这个都没什么思路可以分析的，怎么获取从左到右的叶子节点，只有一种办法，就是中
+序遍历，在遍历的过程中判断节点是否叶子节点，存进一个数组即可。
+对于两棵树，分别进行上述操作，获得两个叶子节点的数组，对比即可获得答案。
+时间已经是最优的了，因为每个节点至少得访问一遍。也无需考虑空间占用率过大的问
+题，因为原本的遍历节点也是O(节点数目)复杂度的，所以我们这样操作不会使用很多的
+空间。
+### C++代码
+```cpp
+class Solution {
+public:
+    bool isLeaf(TreeNode * node) {
+        return node != nullptr && node->left == nullptr && node->right == 
+        nullptr;
+    }
+    void getLeafSeries(TreeNode * root, vector<int>& vec) {
+        if (root == nullptr) return ;
+        getLeafSeries(root->left, vec);
+        if (isLeaf(root)) vec.push_back(root->val);
+        getLeafSeries(root->right, vec);
+    }
+    bool leafSimilar(TreeNode* root1, TreeNode* root2) {
+        vector<int> v1, v2;
+        getLeafSeries(root1, v1);
+        getLeafSeries(root2, v2);
+        return v1 == v2;
+    }
+};
+```
+### Rust代码
+```rust
+use std::rc::Rc;
+use std::cell::RefCell;
+type TreeNodePtr = Option<Rc<RefCell<TreeNode>>>;
+pub fn isLeaf(node: &TreeNodePtr) -> bool {
+    if let Some(node_some) = node {
+        let node_borrow = node_some.borrow();
+        node_borrow.left.is_none() && node_borrow.right.is_none()
+    } else {
+        false
+    }
+}
+pub fn getLeafSeries(root: &TreeNodePtr, vec: &mut Vec<i32>) {
+    if let Some(root_some) = root {
+        let root_borrow = root_some.borrow();
+        getLeafSeries(&root_borrow.left, vec);
+        if (isLeaf(root)) {

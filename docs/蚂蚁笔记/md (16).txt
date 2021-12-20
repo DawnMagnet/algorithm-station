@@ -1,0 +1,49 @@
+原帖地址：http://blog.leanote.com/post/dawnmagnet/b50143d626a8
+# 题目
+![title](https://leanote.com/api/file/getImage?fileId=6092192aab6441404b0011e
+c)
+# 思路分析
+这个题一看还是一个dp，本月是dp月实锤了？？？
+还是那句老话，但凡是看起来模拟能做的都往dp的方向考虑考虑。
+在本题中，可以看出，选了nums[i]就不能选加一和减一了，这是最关键的约束条件，我
+们的dp也应该由此展开。
+所以我们统计一下每个数字出现的次数(存放在cal中)。dp的时候自然就是对nums[i]从
+前向后dp。一共取值范围是10000，也不大。
+dp的时候我们有个优势，因为对于dp来说，向后的约束条件是可以直接忽略的，什么叫
+做向后的约束条件呢，就是nums[i] + 
+1的元素对我们来说还没遍历到，所以可以直接忽略该条件，只考虑不能取nums[i] - 
+1即可。
+**那么这个题目就变成了，10000个数字，最少隔着一个取，问和的最大值**。那么这个
+题目已经变成了一个非常非常简单的入门级动态规划问题。
+就直接**dp[i] = max(dp[i-1], 
+cal[i]*i+在i-1之前dp能取到的最大值)**，为什么要乘最大值不取i-1呢，因为题目的
+条件呀！
+直接就出答案了。
+在i-1之前dp能取到的最大值也可以通过循环来计算，也非常简单，在i循环完成之后，
+再把dp[i-1]和改值取个最大值即可。
+这个也称为延迟最大值，计算也非常方便。而且这个res本身也可以作为返回值，只需要
+和最后一项dp比较一下即可
+### Rust代码
+```rust
+impl Solution {
+    pub fn delete_and_earn(nums: Vec<i32>) -> i32 {
+        let mut dp = [0; 10001];
+        for num in nums {
+            dp[num as usize] += num;
+        }
+        let mut res = 0;
+        for i in 1..=10000 {
+            dp[i] = dp[i - 1].max(dp[i] + res);
+            res = res.max(dp[i - 1]);
+        }
+        res.max(dp[10000])
+    }
+}
+```
+### C++代码
+```cpp
+class Solution {
+public:
+    int deleteAndEarn(vector<int>& nums) {
+        int dp[10001] = {0};
+        for (auto & num : nums) dp[num] += num;
