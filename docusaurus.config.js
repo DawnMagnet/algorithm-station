@@ -8,13 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: '曙光磁铁的算法小站',
   tagline: 'Algorithm are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://dawnmagnet.github.io',
+  baseUrl: '/algorithm-station/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'DawnMagnet', // Usually your GitHub org/user name.
+  projectName: 'algorithm-station', // Usually your repo name.
 
   presets: [
     [
