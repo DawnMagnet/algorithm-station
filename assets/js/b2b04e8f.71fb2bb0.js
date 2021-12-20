@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkalgorithm_station=self.webpackChunkalgorithm_station||[]).push([[8274],{4101:function(a){a.exports=JSON.parse('{"allTagsPath":"/algorithm-staiton/blog/tags","slug":"/algorithm-staiton/blog/tags/hola","name":"hola","count":1,"permalink":"/algorithm-staiton/blog/tags/hola"}')}}]);
