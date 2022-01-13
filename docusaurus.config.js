@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '曙光磁铁的算法小站',
-  tagline: 'Algorithm are cool',
+  tagline: 'Algorithm is cool-算法很酷',
   url: 'https://dawnmagnet.github.io',
   baseUrl: '/algorithm-station/',
   onBrokenLinks: 'throw',
