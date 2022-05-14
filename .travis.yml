@@ -1,11 +1,16 @@
 language: node_js
 node_js:
-  - '14.15.0'
+  - '18.1.0'
 cache:
-  yarn: true
+  npm: false
+  directories:
+    - "~/.pnpm-store"
+before_install:
+  - curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@7
+  - pnpm config set store-dir ~/.pnpm-store
 script:
   - git config --global user.name "${GH_NAME}"
   - git config --global user.email "${GH_EMAIL}"
   - echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
-  - yarn install
-  - GIT_USER="${GH_NAME}" yarn deploy
+  - pnpm install
+  - GIT_USER="${GH_NAME}" pnpm deploy
