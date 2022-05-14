@@ -51,11 +51,17 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'leetcode/intro',
             position: 'left',
             label: '力扣题解',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'doc',
+            docId: 'codeforces/intro',
+            position: 'left',
+            label: 'codeforces题解',
+          },
+          {to: '/blog', label: '博客', position: 'left'},
           {
             href: 'https://github.com/DawnMagnet/algorithm-station',
             label: 'GitHub',

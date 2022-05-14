@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 题解主页
+# LeetCode题解主页
 
 欢迎来到曙光磁铁(DawnMagnet)的算法小站-力扣题解部分！
 
