@@ -7,7 +7,7 @@ sidebar_position: 1
 欢迎来到曙光磁铁(DawnMagnet)的算法小站-力扣题解部分！
 
 
-[![Build Status](https://app.travis-ci.com/DawnMagnet/algorithm-station.svg?branch=master)](https://app.travis-ci.com/DawnMagnet/algorithm-station)
+[![Deploy to GitHub Pages](https://github.com/DawnMagnet/algorithm-station/actions/workflows/deploy.yml/badge.svg)](https://github.com/DawnMagnet/algorithm-station/actions/workflows/deploy.yml)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/DawnMagnet/algorithm-station)
 
