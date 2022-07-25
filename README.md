@@ -1,41 +1,26 @@
-# Website
+# 曙光磁铁的算法小站
+欢迎来到曙光磁铁(DawnMagnet)的算法小站!
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-### Installation
+[![Deploy to GitHub Pages](https://github.com/DawnMagnet/algorithm-station/actions/workflows/deploy.yml/badge.svg)](https://github.com/DawnMagnet/algorithm-station/actions/workflows/deploy.yml)
 
-```
-$ yarn
-```
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/DawnMagnet/algorithm-station)
 
-### Local Development
+本站为个人在刷题、学习过程中的心得和体会。  
+## 题解部分
+主要题目来源为[力扣-中国站 - LeetCode-cn](https://www.leetcode-cn.com),[CodeForces](http://codeforces.com/)等  
+主要刷题语言为 [Rust](https://www.rust-lang.org/) / C++ / Golang  
 
-```
-$ yarn start
-```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## 学习笔记部分
+主要为参加OS Camp 2022所学习的RISC-V、Rust、操作系统开发方面的笔记和源码
 
-### Build
 
-```
-$ yarn build
-```
+---
+欢迎加微信 axccjqh 交流，备注`"算法交流"`和必要的个人信息。
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+---
 
-### Deployment
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- 感谢[Docusaurus](https://docusaurus.io/),[React](https://reactjs.org/)，本站就是构建在其之上。
+- 如过觉得本项目好，可以点个[Star](https://github.com/DawnMagnet/algorithm-station)。请点击右上角的Github图标进入本项目的[Github页面](https://github.com/DawnMagnet/algorithm-station)。
