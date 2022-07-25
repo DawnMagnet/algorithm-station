@@ -61,6 +61,12 @@ const config = {
             position: 'left',
             label: 'codeforces题解',
           },
+          {
+            type: 'doc',
+            docId: 'rcore/summary',
+            position: 'left',
+            label: 'rCore学习',
+          },
           {to: '/blog', label: '博客', position: 'left'},
           {
             href: 'https://github.com/DawnMagnet/algorithm-station',
