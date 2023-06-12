@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkalgorithm_station=self.webpackChunkalgorithm_station||[]).push([[5596],{6537:function(t){t.exports=JSON.parse('{"permalink":"/algorithm-station/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
