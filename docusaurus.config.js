@@ -9,7 +9,7 @@ const config = {
   title: '曙光磁铁的算法小站',
   tagline: 'Algorithm is cool-算法很酷',
   url: 'https://dawnmagnet.github.io',
-  baseUrl: '/algorithm-station/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
